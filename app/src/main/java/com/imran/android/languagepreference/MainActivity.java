@@ -65,7 +65,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         super.onOptionsItemSelected(item);
 
-        
+        switch (item.getItemId()) {
+            case R.id.english:
+                setLanguage("English");
+            case R.id.bengali:
+                setLanguage("Bengali");
+            default:
+                setLanguage("Not Found");
+        }
     }
 
     public void setLanguage(String language) {
