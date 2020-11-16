@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView languageTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        languageTextView = findViewById(R.id.languageTextView);
 
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_btn_speak_now)
@@ -35,6 +39,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setLanguage(String language) {
-
+        languageTextView.setText(language);
     }
 }

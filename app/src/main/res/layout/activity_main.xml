@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textAlignment="center"
-        android:textSize="46sp"
+        android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
