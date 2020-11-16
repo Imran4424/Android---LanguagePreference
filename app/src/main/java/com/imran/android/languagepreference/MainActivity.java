@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setLanguage(String language) {
-        sharedPreferences.edit().putString(keyLanguage, language);
+        sharedPreferences.edit().putString(keyLanguage, language).apply();
         languageTextView.setText(language);
     }
 }
