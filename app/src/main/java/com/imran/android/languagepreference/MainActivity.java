@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
             default:
                 setLanguage("Not Found");
         }
+
+        return  true;
     }
 
     public void setLanguage(String language) {
