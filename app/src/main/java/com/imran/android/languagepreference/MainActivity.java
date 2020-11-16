@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        new AlertDialog(this)
+        new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_btn_speak_now)
                 .setTitle("Choose a language")
                 .setMessage("Which language would you like to use")
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // Set Bengali
                     }
-                });
+                })
+                .show();
     }
 }
