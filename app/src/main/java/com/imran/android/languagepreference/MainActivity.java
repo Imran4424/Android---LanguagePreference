@@ -3,12 +3,16 @@ package com.imran.android.languagepreference;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView languageTextView;
+    private String keyLanguage;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         languageTextView = findViewById(R.id.languageTextView);
+        sharedPreferences = this.getSharedPreferences("com.imran.android.languagepreference", Context.MODE_PRIVATE);
 
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_btn_speak_now)
