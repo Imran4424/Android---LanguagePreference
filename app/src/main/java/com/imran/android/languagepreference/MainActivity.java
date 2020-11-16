@@ -68,8 +68,10 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.english:
                 setLanguage("English");
+                break;
             case R.id.bengali:
                 setLanguage("Bengali");
+                break;
             default:
                 setLanguage("Not Found");
                 return false;
