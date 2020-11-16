@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             setLanguage(savedLanguage);
         }
-
-
     }
 
     public void setLanguage(String language) {
