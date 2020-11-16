@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         languageTextView = findViewById(R.id.languageTextView);
         sharedPreferences = this.getSharedPreferences("com.imran.android.languagepreference", Context.MODE_PRIVATE);
 
+        String savedLanguage = sharedPreferences.getString(keyLanguage, "Not Found");
+        setLanguage(savedLanguage);
+
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_btn_speak_now)
                 .setTitle("Choose a language")
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setLanguage(String language) {
+        sharedPreferences.edit().putString(keyLanguage, language);
         languageTextView.setText(language);
     }
 }
