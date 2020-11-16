@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 setLanguage("Bengali");
             default:
                 setLanguage("Not Found");
+                return false;
         }
 
         return  true;
