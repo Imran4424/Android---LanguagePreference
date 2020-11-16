@@ -21,14 +21,20 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Set English
+                        setLanguage("English");
                     }
                 })
                 .setNegativeButton("Bengali", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // Set Bengali
+                        setLanguage("Bengali");
                     }
                 })
                 .show();
+    }
+
+    public void setLanguage(String language) {
+
     }
 }
